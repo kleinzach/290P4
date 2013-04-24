@@ -16,10 +16,14 @@ public class Barrier : MonoBehaviour {
 	
 	}
 	
-	void OnCollisionEnter (Collision collider) {
-		if (horizontal)
-			collider.rigidbody.AddForce(new Vector3(0, bounceFactor, 0));
-		else
-			collider.rigidbody.AddForce(new Vector3(bounceFactor, 0, 0));
+	void OnCollisionEnter (Collision collision) {
+		if (collision.collider.gameObject.tag == "Comet") {
+			Destroy(collision.collider.gameObject);
+		} else {
+			if (horizontal)
+				collision.collider.rigidbody.AddForce(new Vector3(0, bounceFactor, 0));
+			else
+				collision.collider.rigidbody.AddForce(new Vector3(bounceFactor, 0, 0));
+		}
 	}
 }
