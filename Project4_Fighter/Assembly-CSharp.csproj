@@ -58,6 +58,7 @@
      <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSparks.cs" />
      <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSpray.cs" />
      <Compile Include="Assets\Scripts\Greg&apos;s Scripts\Barrier.cs" />
+     <Compile Include="Assets\Scripts\Greg&apos;s Scripts\Bomb.cs" />
      <Compile Include="Assets\Scripts\Greg&apos;s Scripts\Comet.cs" />
      <Compile Include="Assets\Scripts\Greg&apos;s Scripts\GameMaster.cs" />
      <Compile Include="Assets\Scripts\Greg&apos;s Scripts\PowerUps.cs" />

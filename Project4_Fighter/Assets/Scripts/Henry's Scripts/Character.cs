@@ -122,6 +122,7 @@ public class Character : MonoBehaviour {
 		}
 	}
 	
+	
 	public void activateAttack(Attack a){
 		this.currentAction = (Attack)Instantiate(a,this.transform.position,this.transform.rotation);
 		if(this.controller.currentDirection == Direction.Negative){
