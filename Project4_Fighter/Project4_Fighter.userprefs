@@ -1,15 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Henry's Scripts\Hitbox.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Greg's Scripts\Barrier.cs">
     <Files>
-      <File FileName="Assets\Scripts\Henry's Scripts\Player1.cs" Line="8" Column="22" />
+      <File FileName="Assets\Scripts\Greg's Scripts\RotatePlatform.cs" Line="19" Column="68" />
+      <File FileName="Assets\Scripts\Henry's Scripts\Player1.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Henry's Scripts\Attack.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Henry's Scripts\Hitbox.cs" Line="18" Column="37" />
+      <File FileName="Assets\Scripts\Henry's Scripts\Hitbox.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Henry's Scripts\Player.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Henry's Scripts\Player2.cs" Line="17" Column="3" />
+      <File FileName="Assets\Scripts\Henry's Scripts\Player2.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Henry's Scripts\GenericFactory.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Henry's Scripts\Character.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Henry's Scripts\Direction.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Greg's Scripts\Barrier.cs" Line="9" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -44,6 +44,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Greg&apos;s Scripts\Barrier.cs" />
+     <Compile Include="Assets\Scripts\Greg&apos;s Scripts\GameMaster.cs" />
+     <Compile Include="Assets\Scripts\Greg&apos;s Scripts\PowerUps.cs" />
+     <Compile Include="Assets\Scripts\Greg&apos;s Scripts\RandomPowerUp.cs" />
+     <Compile Include="Assets\Scripts\Greg&apos;s Scripts\RotatePlatform.cs" />
      <Compile Include="Assets\Scripts\Henry&apos;s Scripts\Action.cs" />
      <Compile Include="Assets\Scripts\Henry&apos;s Scripts\Attack.cs" />
      <Compile Include="Assets\Scripts\Henry&apos;s Scripts\Character.cs" />
