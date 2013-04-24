@@ -24,7 +24,7 @@ public abstract class PowerUps : MonoBehaviour {
 		gm = GameObject.Find("GameMaster");
 		gmScript = gm.GetComponent<GameMaster>();
 		int randomInt = Random.Range(0,2);
-		
+		randomInt = 2; // launchMeteor and driveByShooting are not finished
 		switch(randomInt) {
 			case 0:
 				gmScript.SendMessage("launchMeteor");
