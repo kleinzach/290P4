@@ -117,7 +117,7 @@ public class Character : MonoBehaviour {
 			}
 		}
 		if(controller.kickActivated){
-			if(onGround && !ducking){
+			if(onGround && !ducking && !lookingUp){
 				newAttack = (Attack)Instantiate(kick,transform.position,transform.rotation);
 			}
 			else if(onGround && ducking){

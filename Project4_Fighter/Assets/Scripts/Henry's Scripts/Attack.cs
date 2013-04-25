@@ -72,6 +72,7 @@ public class Attack : MonoBehaviour {
 			}
 			hitbox.GetComponent<Hitbox>().a = this;
 			comboable = true;
+			m_character.rigidbody.AddForce(playerForce);
 		}
 	}
 	
@@ -82,7 +83,6 @@ public class Attack : MonoBehaviour {
 			if(comboable){
 				executeCombo();
 			}
-			m_character.rigidbody.AddForce(playerForce);
 		}
 		if(currentLife >= hitboxLifetime){
 			this.alive = false;
