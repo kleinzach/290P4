@@ -1,0 +1,66 @@
+-debug
+-target:library
+-nowarn:0169
+-out:Temp/Assembly-CSharp.dll
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll"
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll"
+-define:UNITY_STANDALONE
+-define:ENABLE_MICROPHONE
+-define:ENABLE_IMAGEEFFECTS
+-define:ENABLE_WEBCAM
+-define:ENABLE_AUDIO_FMOD
+-define:ENABLE_NETWORK
+-define:ENABLE_MONO
+-define:ENABLE_PHYSICS
+-define:ENABLE_TERRAIN
+-define:ENABLE_CACHING
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_GENERICS
+-define:ENABLE_CLOTH
+-define:ENABLE_MOVIES
+-define:ENABLE_AUDIO
+-define:ENABLE_WWW
+-define:ENABLE_SHADOWS
+-define:ENABLE_DUCK_TYPING
+-define:UNITY_4_0_1
+-define:UNITY_4_0
+-define:UNITY_STANDALONE_WIN
+-define:ENABLE_PROFILER
+-define:UNITY_EDITOR
+"Assets/Detonator Explosion Framework/System/Detonator.cs"
+"Assets/Detonator Explosion Framework/System/DetonatorBurstEmitter.cs"
+"Assets/Detonator Explosion Framework/System/DetonatorCloudRing.cs"
+"Assets/Detonator Explosion Framework/System/DetonatorFireball.cs"
+"Assets/Detonator Explosion Framework/System/DetonatorForce.cs"
+"Assets/Detonator Explosion Framework/System/DetonatorGlow.cs"
+"Assets/Detonator Explosion Framework/System/DetonatorHeatwave.cs"
+"Assets/Detonator Explosion Framework/System/DetonatorLight.cs"
+"Assets/Detonator Explosion Framework/System/DetonatorShockwave.cs"
+"Assets/Detonator Explosion Framework/System/DetonatorSmoke.cs"
+"Assets/Detonator Explosion Framework/System/DetonatorSound.cs"
+"Assets/Detonator Explosion Framework/System/DetonatorSparks.cs"
+"Assets/Detonator Explosion Framework/System/DetonatorSpray.cs"
+"Assets/Scripts/Greg's Scripts/Barrier.cs"
+"Assets/Scripts/Greg's Scripts/Bomb.cs"
+"Assets/Scripts/Greg's Scripts/Comet.cs"
+"Assets/Scripts/Greg's Scripts/DriveBy.cs"
+"Assets/Scripts/Greg's Scripts/FireBall.cs"
+"Assets/Scripts/Greg's Scripts/GameMaster.cs"
+"Assets/Scripts/Greg's Scripts/LevelEffectPowerUp.cs"
+"Assets/Scripts/Greg's Scripts/Lvl1GM.cs"
+"Assets/Scripts/Greg's Scripts/Lvl2GM.cs"
+"Assets/Scripts/Greg's Scripts/Lvl3GM.cs"
+"Assets/Scripts/Greg's Scripts/Meteor.cs"
+"Assets/Scripts/Greg's Scripts/OscillatePlatform.cs"
+"Assets/Scripts/Greg's Scripts/PowerUps/PowerUps.cs"
+"Assets/Scripts/Greg's Scripts/RandomPowerUp.cs"
+"Assets/Scripts/Greg's Scripts/RotatePlatform.cs"
+"Assets/Scripts/Henry's Scripts/Action.cs"
+"Assets/Scripts/Henry's Scripts/Attack.cs"
+"Assets/Scripts/Henry's Scripts/Character.cs"
+"Assets/Scripts/Henry's Scripts/Direction.cs"
+"Assets/Scripts/Henry's Scripts/GenericFactory.cs"
+"Assets/Scripts/Henry's Scripts/Hitbox.cs"
+"Assets/Scripts/Henry's Scripts/Player.cs"
+"Assets/Scripts/Henry's Scripts/Player1.cs"
+"Assets/Scripts/Henry's Scripts/Player2.cs"
