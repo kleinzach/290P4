@@ -12,7 +12,7 @@ public class Hitbox : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		this.gameObject.AddComponent<Rigidbody>();
+		//this.gameObject.AddComponent<Rigidbody>();
 		this.rigidbody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
 		this.rigidbody.isKinematic = true;
 		this.rigidbody.mass = .000000001f;
