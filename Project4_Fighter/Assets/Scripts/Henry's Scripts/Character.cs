@@ -62,8 +62,10 @@ public class Character : MonoBehaviour {
 		else{
 			this.renderer.material.color = Color.white;	
 		}
-		if (!GeometryUtility.TestPlanesAABB(planes, this.collider.bounds))
-			Destroy(gameObject);
+		var screenpos = Camera.main.WorldToViewportPoint(this.transform.position);
+		if (screenpos.x < 0 || screenpos.x > 1 || screenpos.y < 0) {
+			Destroy (gameObject);
+		}
 		
 	}
 	
