@@ -118,8 +118,13 @@ public class Character : MonoBehaviour {
 		this.rigidbody.AddForce(force);
 		this.renderer.material.color = Color.red;
 		if(this.life <= 0){
-			Destroy(this.gameObject);	
+			Destroy (this.gameObject);
 		}
+	}
+	
+	void OnDestroy() {
+		Application.LoadLevel (0);
+		StartScript.setMessage("Player " + playerNumber.ToString() + " has fainted!");
 	}
 	
 	
