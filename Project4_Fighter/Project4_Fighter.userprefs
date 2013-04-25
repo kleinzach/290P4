@@ -1,13 +1,21 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Greg's Scripts\Bomb.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Greg's Scripts\DriveBy.cs">
     <Files>
+      <File FileName="Assets\Scripts\Greg's Scripts\Lvl1GM.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Greg's Scripts\Bomb.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Greg's Scripts\Comet.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Greg's Scripts\Comet.cs" Line="39" Column="3" />
       <File FileName="Assets\Scripts\Greg's Scripts\Barrier.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Henry's Scripts\Character.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Greg's Scripts\OscillatePlatform.cs" Line="19" Column="3" />
+      <File FileName="Assets\Scripts\Greg's Scripts\OscillatePlatform.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Greg's Scripts\PowerUps.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Greg's Scripts\Lvl2GM.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Greg's Scripts\Lvl3GM.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Greg's Scripts\GameMaster.cs" Line="11" Column="59" />
+      <File FileName="Assets\Scripts\Greg's Scripts\LevelEffectPowerUp.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Greg's Scripts\Meteor.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Greg's Scripts\DriveBy.cs" Line="9" Column="2" />
+      <File FileName="Assets\Scripts\Greg's Scripts\FireBall.cs" Line="26" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
