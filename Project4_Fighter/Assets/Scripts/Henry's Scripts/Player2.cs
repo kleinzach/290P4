@@ -66,7 +66,6 @@ public class Player2 : Player {
 		else{
 			blockReset = true;	
 		}
-		
 	}
 }
 

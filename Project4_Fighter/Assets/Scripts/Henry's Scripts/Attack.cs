@@ -15,6 +15,7 @@ public class Attack : MonoBehaviour {
 	public float hitboxLifetime = 1;
 	
 	public Vector3 force = new Vector3(0,0,0);
+	public float stunTime = 0;
 	
 	public float downTime = .5f;
 	
@@ -56,14 +57,19 @@ public class Attack : MonoBehaviour {
 			if(parented){
 				this.hitbox.transform.parent = this.transform;
 			}
+			
 			if(hitbox.GetComponent<Hitbox>() == null)
 				hitbox.AddComponent<Hitbox>();
 			hitbox.GetComponent<Hitbox>().damage = damage;
 			hitbox.GetComponent<Hitbox>().defensive = defensive;
+			hitbox.GetComponent<Hitbox>().stunTime = stunTime;
 			hitbox.transform.localScale = hitboxSize;
 			hitbox.transform.position = hitboxInitialPosition + m_character.transform.position;
 			hitbox.transform.rotation = new Quaternion(0,0,hitboxRotation,0);
 			hitbox.gameObject.layer = m_character.playerNumber == 1? 9:12;
+			if(defensive){
+				hitbox.gameObject.layer += 1;	
+			}
 			hitbox.GetComponent<Hitbox>().a = this;
 			comboable = true;
 		}
@@ -96,7 +102,8 @@ public class Attack : MonoBehaviour {
 	void executeCombo(){
 		Attack comboAttack = null;
 		Player p = m_character.controller;
-		if(currentLife < maximumComboTime && currentLife > minimumComboTime){
+		bool comboDirectionReady = (comboHorizontal == p.currentHorizontalInput) && (comboVertical == p.currentVerticalInput);
+		if(currentLife < maximumComboTime && currentLife > minimumComboTime && comboDirectionReady){
 			switch(comboAction){
 			case Action.Punch:
 				if(p.punchActivated){
@@ -134,7 +141,7 @@ public class Attack : MonoBehaviour {
 	}
 	
 	public void Hit(Character c){
-		c.damage(this.damage, force);
+		c.damage(this.damage, force, stunTime);
 		c.rigidbody.AddForce(this.force);
 	}
 }

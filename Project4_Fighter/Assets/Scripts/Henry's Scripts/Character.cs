@@ -16,12 +16,15 @@ public class Character : MonoBehaviour {
 	private float jumpTime = 0;
 	private bool onGround = true;
 	private bool ducking = false;
+	private bool lookingUp = false;
 	
 	public Attack punch;
+	public Attack upPunch;
 	public Attack duckPunch;
 	public Attack jumpPunch;
 	
 	public Attack kick;
+	public Attack upKick;
 	public Attack duckKick;
 	public Attack jumpKick;
 	
@@ -31,6 +34,9 @@ public class Character : MonoBehaviour {
 	
 	public int playerNumber = 1;
 	
+	private float stunned = 0;
+	private float hurt = 0;
+	
 	void Start () {	
 		
 	}
@@ -38,9 +44,20 @@ public class Character : MonoBehaviour {
 	// Fixed Update is called once per physics frame
 	void FixedUpdate () {
 		downTime -= Time.fixedDeltaTime;
+		if(stunned >= 0){
+			stunned -= Time.fixedDeltaTime;
+			return;
+		}
 		move();
 		if(downTime <= 0){
 			performAction();
+		}
+		if(hurt >= 0){
+			this.renderer.material.color = Color.red;
+			hurt -= Time.fixedDeltaTime;
+		}
+		else{
+			this.renderer.material.color = Color.white;	
 		}
 	}
 	
@@ -48,6 +65,7 @@ public class Character : MonoBehaviour {
 	/// Move this Character.
 	/// </summary>
 	void move(){
+		
 		Vector3 moveDirection = Vector3.zero;
 		if(controller.currentHorizontalInput == Direction.Positive){
 			moveDirection.x += 1;
@@ -60,6 +78,8 @@ public class Character : MonoBehaviour {
 		else{
 			moveDirection.x = 0;	
 		}
+		this.ducking = onGround && (controller.currentVerticalInput == Direction.Negative);
+		this.lookingUp = onGround && (controller.currentVerticalInput == Direction.Positive);
 		this.transform.position  += moveDirection * moveSpeed * Time.fixedDeltaTime;
 	}
 	
@@ -83,11 +103,14 @@ public class Character : MonoBehaviour {
 		Attack newAttack = null;
 		
 		if(controller.punchActivated){
-			if(onGround && !ducking){
+			if(onGround && !ducking && !lookingUp){
 				newAttack = (Attack)Instantiate(punch,transform.position,transform.rotation);
 			}
 			else if(onGround && ducking){
 				newAttack = (Attack)Instantiate(duckPunch,transform.position,transform.rotation);
+			}
+			else if(onGround && lookingUp){
+				newAttack = (Attack)Instantiate(upPunch,transform.position,transform.rotation);
 			}
 			else{
 				newAttack = (Attack)Instantiate(jumpPunch,transform.position,transform.rotation);
@@ -99,6 +122,9 @@ public class Character : MonoBehaviour {
 			}
 			else if(onGround && ducking){
 				newAttack = (Attack)Instantiate(duckKick,transform.position,transform.rotation);
+			}
+			else if(onGround && lookingUp){
+				newAttack = (Attack)Instantiate(upKick,transform.position,transform.rotation);
 			}
 			else{
 				newAttack = (Attack)Instantiate(jumpKick,transform.position,transform.rotation);
@@ -113,10 +139,12 @@ public class Character : MonoBehaviour {
 		}
 	}
 	
-	public void damage(float damage, Vector3 force){
+	public void damage(float damage, Vector3 force, float stunTime){
 		this.life -= damage;
 		this.rigidbody.AddForce(force);
+		this.hurt = .25f;
 		this.renderer.material.color = Color.red;
+		this.stunned = stunTime;
 		if(this.life <= 0){
 			Destroy (this.gameObject);
 		}

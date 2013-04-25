@@ -9,10 +9,12 @@ public class Hitbox : MonoBehaviour {
 	
 	public float damage = 1f;
 	
+	public float stunTime = 0f;
+	
 
 	// Use this for initialization
 	void Start () {
-		//this.gameObject.AddComponent<Rigidbody>();
+		this.gameObject.AddComponent<Rigidbody>();
 		this.rigidbody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
 		this.rigidbody.isKinematic = true;
 		this.rigidbody.mass = .000000001f;
@@ -30,7 +32,7 @@ public class Hitbox : MonoBehaviour {
 			Destroy(other.gameObject);	
 		}
 		else if(other.gameObject.layer == 8 || other.gameObject.layer == 11){
-			(other.gameObject.GetComponent<Character>()).damage(damage,a.force);
+			(other.gameObject.GetComponent<Character>()).damage(damage,a.force,stunTime);
 		}
 		if(a.breaks){
 			Destroy(this.gameObject);
