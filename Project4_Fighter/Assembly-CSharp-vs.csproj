@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\Greg&apos;s Scripts\Lvl1GM.cs" />
      <Compile Include="Assets\Scripts\Greg&apos;s Scripts\Lvl2GM.cs" />
      <Compile Include="Assets\Scripts\Greg&apos;s Scripts\Lvl3GM.cs" />
+     <Compile Include="Assets\Scripts\Greg&apos;s Scripts\Meteor.cs" />
      <Compile Include="Assets\Scripts\Greg&apos;s Scripts\OscillatePlatform.cs" />
      <Compile Include="Assets\Scripts\Greg&apos;s Scripts\PowerUps.cs" />
      <Compile Include="Assets\Scripts\Greg&apos;s Scripts\RandomPowerUp.cs" />

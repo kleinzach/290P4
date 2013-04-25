@@ -1,14 +1,17 @@
 using UnityEngine;
 using System.Collections;
 
-public abstract class GameMaster : MonoBehaviour {
+public class GameMaster : MonoBehaviour {	
 	
+	public float hp1, hp2;
+    public Texture2D hpTex;
+	public GameObject p1,p2;
 	
-	protected float hp1, hp2;
-    protected Texture2D hpTex;
-	protected GameObject p1,p2;
+	/* Prefabs instantiated by different GameMasters */
+	public GameObject cometPrefab, bombPrefab, meteorPrefab, LEPUPrefab;
 	
-	// Use this for initialization
+	private GameObject meteor;
+
 	public virtual void Start () {
 		p1 = GameObject.Find("Player1").GetComponent<Player1>().controlledCharacter.gameObject;
 		p2 = GameObject.Find("Player2").GetComponent<Player2>().controlledCharacter.gameObject;
@@ -16,7 +19,7 @@ public abstract class GameMaster : MonoBehaviour {
 	}
 	
 	/* Attempt at health bars */
-	public virtual void OnGUI() {
+	void OnGUI() {
 
 		GUI.Box(new Rect(Screen.width/4, 10, hp1, 30), hpTex);
 		GUI.Box (new Rect(Screen.width * 3/4, 10, hp2, 30), hpTex);
@@ -30,18 +33,24 @@ public abstract class GameMaster : MonoBehaviour {
 		}
 	}	
 	
-	public virtual void launchMeteor () {
-		
+	public virtual GameObject getLEPU() {
+		return LEPUPrefab;	
 	}
 	
-	public virtual void driveByShooting () {
+	public void launchMeteor () {
+		meteor = (GameObject) Instantiate(meteorPrefab, new Vector3(8, 10, 0), Quaternion.identity);
+	}
+	
+	public void driveByShooting () {
 	
 	}
 	
-	public virtual void platformsOscillate() {
+	public void platformsOscillate() {
 		OscillatePlatform[] oscPlatforms = FindObjectsOfType(typeof(OscillatePlatform)) as OscillatePlatform[];
         foreach (OscillatePlatform platform in oscPlatforms)
             platform.activated = true;
 	}	
 	
+	
+
 }

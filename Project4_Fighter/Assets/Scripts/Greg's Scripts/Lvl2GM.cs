@@ -4,30 +4,24 @@ using System.Collections;
 public class Lvl2GM : GameMaster {
 	
 	public float gravityVal = 4.0F; 
-	public GameObject cometPrefab;
 	private GameObject comet = null;
 	private int numComets;
 	public int MAX_COMETS = 1;
 	
 	
 	// Use this for initialization
-	override public void Start () {
+	void Start () {
 		base.Start();
 		Physics.gravity = new Vector3(0, -gravityVal, 0);
-		
 	}
 	
 	// Update is called once per frame
-	override public void FixedUpdate () {
+	void FixedUpdate () {
 		base.FixedUpdate();
 		if (comet == null && numComets < MAX_COMETS) {
 			StartCoroutine (spawnDelay());
 			numComets++;
 		}
-	}
-	
-	override public void OnGUI () {
-		base.OnGUI();	
 	}
 	
 	void spawnComet() {
@@ -45,4 +39,5 @@ public class Lvl2GM : GameMaster {
 	void cometDestroyed () {
 		numComets--;
 	}
+	
 }
