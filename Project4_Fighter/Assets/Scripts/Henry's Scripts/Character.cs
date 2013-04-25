@@ -37,8 +37,11 @@ public class Character : MonoBehaviour {
 	private float stunned = 0;
 	private float hurt = 0;
 	
+	private Plane[] planes;
+
+	
 	void Start () {	
-		
+        planes = GeometryUtility.CalculateFrustumPlanes(Camera.main);		
 	}
 	
 	// Fixed Update is called once per physics frame
@@ -59,6 +62,9 @@ public class Character : MonoBehaviour {
 		else{
 			this.renderer.material.color = Color.white;	
 		}
+		if (!GeometryUtility.TestPlanesAABB(planes, this.collider.bounds))
+			Destroy(gameObject);
+		
 	}
 	
 	/// <summary>
