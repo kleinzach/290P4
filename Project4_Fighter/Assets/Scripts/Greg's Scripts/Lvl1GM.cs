@@ -13,7 +13,7 @@ public class Lvl1GM : GameMaster {
 	}
 	
 	IEnumerator spawnPowerUps(GameObject powerUp) {
-		newPowerUp = Instantiate(powerUp, new Vector3(Random.Range(-7, 7),Random.Range(-2, 8), 0), Quaternion.identity) as GameObject;
+		newPowerUp = Instantiate(powerUp, new Vector3(Random.Range(-7, 7),Random.Range(0, 8), 0), Quaternion.identity) as GameObject;
 		yield return new WaitForSeconds(spawnRate);
 		StartCoroutine(spawnPowerUps(getRandomPowerUp()));
 	}

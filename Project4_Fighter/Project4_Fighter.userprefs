@@ -2,18 +2,34 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Henry's Scripts\Hitbox.cs">
     <Files>
+<<<<<<< HEAD
       <File FileName="Assets\Scripts\Henry's Scripts\Attack.cs" Line="75" Column="48" />
       <File FileName="Assets\Scripts\Henry's Scripts\Hitbox.cs" Line="18" Column="1" />
       <File FileName="Assets\Scripts\Greg's Scripts\Comet.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Greg's Scripts\Barrier.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Henry's Scripts\Character.cs" Line="120" Column="41" />
+=======
+      <File FileName="Assets\Scripts\Greg's Scripts\Lvl1GM.cs" Line="16" Column="83" />
+      <File FileName="Assets\Scripts\Henry's Scripts\Hitbox.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Greg's Scripts\Comet.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Greg's Scripts\Barrier.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Henry's Scripts\Character.cs" Line="44" Column="68" />
+>>>>>>> d5095058ccc146bb1fc46dfadec622fb78eaddd7
       <File FileName="Assets\Scripts\Greg's Scripts\OscillatePlatform.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Greg's Scripts\Lvl3GM.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Greg's Scripts\Lvl3GM.cs" Line="16" Column="83" />
       <File FileName="Assets\Scripts\Greg's Scripts\GameMaster.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Henry's Scripts\Action.cs" Line="1" Column="1" />
+<<<<<<< HEAD
       <File FileName="Assets\Scripts\Henry's Scripts\Player.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Henry's Scripts\Player1.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Henry's Scripts\Player2.cs" Line="1" Column="1" />
+=======
+      <File FileName="Assets\Scripts\Henry's Scripts\Attack.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Henry's Scripts\Player.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Henry's Scripts\Player1.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Henry's Scripts\Player2.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Greg's Scripts\PowerUps\PowerUps.cs" Line="48" Column="53" />
+>>>>>>> d5095058ccc146bb1fc46dfadec622fb78eaddd7
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

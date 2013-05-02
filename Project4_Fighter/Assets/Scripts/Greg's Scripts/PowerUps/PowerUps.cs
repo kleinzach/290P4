@@ -41,11 +41,11 @@ public abstract class PowerUps : MonoBehaviour {
 	}
 	
 	protected void heal(GameObject player) {
-		player.GetComponent<Character>().life *= 1.5f;
+		player.GetComponent<Character>().life *= 1.1f;
 	}
 	
 	protected void increaseSpeed(GameObject player) {
-		player.GetComponent<Character>().moveSpeed *= 2;
+		player.GetComponent<Character>().moveSpeed *= 1.1f;
 	}
 	
 	IEnumerator turnOffEffect (float lifespan) {

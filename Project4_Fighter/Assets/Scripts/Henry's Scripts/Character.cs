@@ -38,7 +38,6 @@ public class Character : MonoBehaviour {
 	private float hurt = 0;
 	
 	void Start () {	
-		
 	}
 	
 	// Fixed Update is called once per physics frame
@@ -59,6 +58,11 @@ public class Character : MonoBehaviour {
 		else{
 			this.renderer.material.color = Color.white;	
 		}
+		var screenpos = Camera.main.WorldToViewportPoint(this.transform.position);
+		if (screenpos.x < 0 || screenpos.x > 1 || screenpos.y < 0) {
+			Destroy (gameObject);
+		}
+		
 	}
 	
 	/// <summary>
