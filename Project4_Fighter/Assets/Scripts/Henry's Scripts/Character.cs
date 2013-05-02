@@ -143,6 +143,7 @@ public class Character : MonoBehaviour {
 		}
 	}
 	
+	//applies damage, force, and stun to the character.
 	public void damage(float damage, Vector3 force, float stunTime){
 		this.life -= damage;
 		this.rigidbody.AddForce(force);
@@ -159,7 +160,7 @@ public class Character : MonoBehaviour {
 		StartScript.setMessage("Player " + playerNumber.ToString() + " has fainted!");
 	}
 	
-	
+	//Instantiates and positions the attack in the right direction
 	public void activateAttack(Attack a){
 		this.currentAction = (Attack)Instantiate(a,this.transform.position,this.transform.rotation);
 		if(this.controller.currentDirection == Direction.Negative){

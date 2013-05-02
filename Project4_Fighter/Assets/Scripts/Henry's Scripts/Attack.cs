@@ -1,19 +1,34 @@
 using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Creates and manages the hitbox for the attack.
+/// </summary>
 public class Attack : MonoBehaviour {
 	public Character m_character;
 	
+	/// <summary>
+	/// The hitbox initial transforms.
+	/// </summary>
 	public Vector3 hitboxInitialPosition = new Vector3(1,0,0);
 	public Vector3 hitboxSize = new Vector3(1,1,1);
 	public float hitboxRotation = 0;
 	
+	/// <summary>
+	/// Whether or not it passes through players and objects.
+	/// </summary>
 	public bool breaks = true;
 	
+	/// <summary>
+	/// The hitbox velocity and how long it stays around.
+	/// </summary>
 	public Vector3 hitboxVelocity = new Vector3(0,0,0);
 	private float currentLife = 0;
 	public float hitboxLifetime = 1;
 	
+	/// <summary>
+	/// The force it adds to the target.
+	/// </summary>
 	public Vector3 force = new Vector3(0,0,0);
 	public float stunTime = 0;
 	
@@ -23,6 +38,9 @@ public class Attack : MonoBehaviour {
 	public bool usesGravity = false;
 	public Vector3 gravityForce = new Vector3(0,-1,0);
 	
+	/// <summary>
+	/// The combo associated with this move.
+	/// </summary>
 	public float minimumComboTime = 0f;
 	public float maximumComboTime = 1f;
 	public Action comboAction;
@@ -48,6 +66,7 @@ public class Attack : MonoBehaviour {
 		
 	}
 	
+	//Resets the attack, to match it with the character output.
 	public void reset(){
 		if(m_character != null){
 			Destroy(this.hitbox.gameObject);
@@ -134,6 +153,7 @@ public class Attack : MonoBehaviour {
 		}	
 	}
 	
+	//Kills this and the hibox
 	public void Kill(){
 		Destroy(hitbox.gameObject);
 		this.hitbox = null;

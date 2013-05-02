@@ -16,6 +16,7 @@ public class Player1 : Player {
 		getInputs();
 	}
 	
+	//Gets inputs specific to player one, and stores the results in the fields.
 	public override void getInputs(){
 		float verticalInput = Input.GetAxis("Vertical");
 		float horizontalInput = Input.GetAxis("Horizontal");
