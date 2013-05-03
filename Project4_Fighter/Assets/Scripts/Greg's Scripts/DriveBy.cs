@@ -19,6 +19,7 @@ public class DriveBy : MonoBehaviour {
 		transform.Translate(strafe);
 	}
 	
+	// Send out a wave of fireballs (currently bugged)
 	IEnumerator emitDeath() {
 		
 		float tiltAngle = 360f / 8f;

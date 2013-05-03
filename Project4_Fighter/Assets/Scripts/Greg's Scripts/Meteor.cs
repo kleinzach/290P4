@@ -19,6 +19,7 @@ public class Meteor : MonoBehaviour {
 		
 	}
 
+	// Destroys anything on contact and causes and explosion
 	void OnCollisionEnter (Collision other) {
 		
 		if (meteorExplosion != null)

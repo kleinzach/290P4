@@ -30,6 +30,7 @@ public class Comet : MonoBehaviour {
 		GameObject.Find("GameMaster").SendMessage("cometDestroyed");
 	}
 	
+	// Explode when the player collides with the comet
 	void OnTriggerEnter (Collider other) {
 		if (other.gameObject.tag == "Player") {
 			Destroy(other.gameObject);

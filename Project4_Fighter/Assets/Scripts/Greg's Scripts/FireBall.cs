@@ -26,6 +26,7 @@ public class FireBall : MonoBehaviour {
 		
 	}
 	
+	// Destroy the fireball and the player upon impact
 	void OnTriggerEnter (Collider other) {
 		if (other.gameObject.tag == "Player") {
 			Destroy(other.gameObject);

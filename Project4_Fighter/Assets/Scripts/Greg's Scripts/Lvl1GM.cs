@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
+// GameMaster for first scene
 public class Lvl1GM : GameMaster {
 
 	private GameObject newPowerUp;
@@ -12,6 +13,7 @@ public class Lvl1GM : GameMaster {
 		StartCoroutine(spawnPowerUps(getRandomPowerUp()));
 	}
 	
+	// Spawns powerups in arena
 	IEnumerator spawnPowerUps(GameObject powerUp) {
 		newPowerUp = Instantiate(powerUp, new Vector3(Random.Range(-7, 7),Random.Range(0, 8), 0), Quaternion.identity) as GameObject;
 		yield return new WaitForSeconds(spawnRate);

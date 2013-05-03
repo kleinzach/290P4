@@ -18,12 +18,14 @@ public class OscillatePlatform : MonoBehaviour {
 		
 	}
 	
+	// Changes direction after a few seconds
 	IEnumerator changeDirection () {
 		yield return new WaitForSeconds(3);	
 		goRight = !goRight;
 		StartCoroutine(changeDirection());
 	}
 	
+	// Moves the platform left and right
 	void movePlatform() {
 		if (goRight)
 			this.transform.Translate(speed * Vector3.right * Time.deltaTime);

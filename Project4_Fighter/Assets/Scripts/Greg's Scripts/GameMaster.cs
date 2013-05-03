@@ -27,13 +27,15 @@ public class GameMaster : MonoBehaviour {
 	
 	}
 	
+	// Update HP
 	public virtual void FixedUpdate () {
 		if (p1 && p2) { // Temp hack until hp bars are fixed
 			hp1 = p1.GetComponent<Character>().life;
 			hp2 = p2.GetComponent<Character>().life;
 		}
 	}	
-	
+		
+	// Puts a meteor with a random trajectory and position in the scene
 	public void launchMeteor () {
 		int i = Random.Range(-9,9);
 		meteor = (GameObject) Instantiate(meteorPrefab, new Vector3(i, 10, 0), Quaternion.identity);
@@ -53,6 +55,8 @@ public class GameMaster : MonoBehaviour {
 		}
 	}*/
 	
+	
+	// Makes platforms oscillate
 	public void platformsOscillate(bool status) {
 		OscillatePlatform[] oscPlatforms = FindObjectsOfType(typeof(OscillatePlatform)) as OscillatePlatform[];
         foreach (OscillatePlatform platform in oscPlatforms)

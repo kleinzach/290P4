@@ -16,6 +16,7 @@ public class Barrier : MonoBehaviour {
 	
 	}
 	
+	// Bounces playes back into arena (destroys comets)
 	void OnCollisionEnter (Collision collision) {
 		if (collision.collider.gameObject.tag == "Comet") {
 			Destroy(collision.collider.gameObject);

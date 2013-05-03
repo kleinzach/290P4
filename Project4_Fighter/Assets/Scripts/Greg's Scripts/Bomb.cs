@@ -15,6 +15,7 @@ public class Bomb : MonoBehaviour {
 
 	}
 	
+	// Explode on impact
 	void OnCollisionEnter(Collision collision) {
 		GameObject explode = (GameObject) Instantiate(bombExplosion, this.transform.position, Quaternion.identity);
 		Destroy(gameObject);

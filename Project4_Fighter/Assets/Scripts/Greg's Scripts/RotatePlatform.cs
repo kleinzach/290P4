@@ -11,7 +11,7 @@ public class RotatePlatform : MonoBehaviour {
 	
 	}
 	
-	// Update is called once per frame
+	// Rotates platform
 	void Update () {
 		if (direction)
 			transform.Rotate(speed * Vector3.forward * Time.deltaTime);
